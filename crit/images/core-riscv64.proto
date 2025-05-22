@@ -46,8 +46,8 @@ message user_riscv64_d_ext_entry {
 }
 
 message thread_info_riscv64 {
-	required uint64				clear_tid_addr	= 1[(criu).hex = true];
+	required uint64				clear_tid_addr	= 1[(criu2).hex = true];
 	required uint64				tls		= 2;
-	required user_riscv64_regs_entry	gpregs		= 3[(criu).hex = true];
+	required user_riscv64_regs_entry	gpregs		= 3[(criu2).hex = true];
 	required user_riscv64_d_ext_entry	fpsimd		= 4;
 }

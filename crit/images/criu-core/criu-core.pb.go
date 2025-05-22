@@ -908,12 +908,12 @@ const file_criu_core_proto_rawDesc = "" +
 	"opts.proto\"\x87\x06\n" +
 	"\x0ftask_core_entry\x12'\n" +
 	"\n" +
-	"task_state\x18\x01 \x02(\rB\b\xd2?\x052\x03genR\ttaskState\x12\x1b\n" +
+	"task_state\x18\x01 \x02(\rB\b\x92~\x052\x03genR\ttaskState\x12\x1b\n" +
 	"\texit_code\x18\x02 \x02(\rR\bexitCode\x12 \n" +
 	"\vpersonality\x18\x03 \x02(\rR\vpersonality\x12\x14\n" +
 	"\x05flags\x18\x04 \x02(\rR\x05flags\x12$\n" +
 	"\n" +
-	"blk_sigset\x18\x05 \x02(\x04B\x05\xd2?\x02\b\x01R\tblkSigset\x12\x12\n" +
+	"blk_sigset\x18\x05 \x02(\x04B\x05\x92~\x02\b\x01R\tblkSigset\x12\x12\n" +
 	"\x04comm\x18\x06 \x02(\tR\x04comm\x12*\n" +
 	"\x06timers\x18\a \x01(\v2\x12.task_timers_entryR\x06timers\x12-\n" +
 	"\arlimits\x18\b \x01(\v2\x13.task_rlimits_entryR\arlimits\x12\x15\n" +
@@ -928,10 +928,10 @@ const file_criu_core_proto_rawDesc = "" +
 	"sigactions\x18\x0f \x03(\v2\t.sa_entryR\n" +
 	"sigactions\x12'\n" +
 	"\x0fchild_subreaper\x18\x12 \x01(\bR\x0echildSubreaper\x125\n" +
-	"\x13blk_sigset_extended\x18\x14 \x01(\x04B\x05\xd2?\x02\b\x01R\x11blkSigsetExtended\x12\x1d\n" +
+	"\x13blk_sigset_extended\x18\x14 \x01(\x04B\x05\x92~\x02\b\x01R\x11blkSigsetExtended\x12\x1d\n" +
 	"\n" +
 	"stop_signo\x18\x15 \x01(\rR\tstopSigno\x12G\n" +
-	"\x1cmembarrier_registration_mask\x18\x16 \x01(\rB\x05\xd2?\x02\b\x01R\x1amembarrierRegistrationMask\"\xe3\x02\n" +
+	"\x1cmembarrier_registration_mask\x18\x16 \x01(\rB\x05\x92~\x02\b\x01R\x1amembarrierRegistrationMask\"\xe3\x02\n" +
 	"\x13task_kobj_ids_entry\x12\x13\n" +
 	"\x05vm_id\x18\x01 \x02(\rR\x04vmId\x12\x19\n" +
 	"\bfiles_id\x18\x02 \x02(\rR\afilesId\x12\x13\n" +

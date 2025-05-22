@@ -10,9 +10,9 @@ message ghost_file_entry {
 	required uint32		gid		= 2;
 	required uint32		mode		= 3;
 
-	optional uint32		dev		= 4 [(criu).dev = true];
+	optional uint32		dev		= 4 [(criu2).dev = true];
 	optional uint64		ino		= 5;
-	optional uint32		rdev		= 6 [(criu).dev = true, (criu).odev = true];
+	optional uint32		rdev		= 6 [(criu2).dev = true, (criu2).odev = true];
 	optional timeval	atim		= 7;
 	optional timeval	mtim		= 8;
 	optional bool		chunks		= 9;

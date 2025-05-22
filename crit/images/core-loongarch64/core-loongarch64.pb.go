@@ -218,10 +218,10 @@ const file_core_loongarch64_proto_rawDesc = "" +
 	"\x03fcc\x18\x02 \x02(\x04R\x03fcc\x12\x12\n" +
 	"\x04fcsr\x18\x03 \x02(\rR\x04fcsr\"\xd6\x01\n" +
 	"\x17thread_info_loongarch64\x12+\n" +
-	"\x0eclear_tid_addr\x18\x01 \x02(\x04B\x05\xd2?\x02\b\x01R\fclearTidAddr\x12\x10\n" +
+	"\x0eclear_tid_addr\x18\x01 \x02(\x04B\x05\x92~\x02\b\x01R\fclearTidAddr\x12\x10\n" +
 	"\x03tls\x18\x02 \x02(\x04R\x03tls\x12=\n" +
-	"\x06gpregs\x18\x03 \x02(\v2\x1e.user_loongarch64_gpregs_entryB\x05\xd2?\x02\b\x01R\x06gpregs\x12=\n" +
-	"\x06fpregs\x18\x04 \x02(\v2\x1e.user_loongarch64_fpregs_entryB\x05\xd2?\x02\b\x01R\x06fpregs"
+	"\x06gpregs\x18\x03 \x02(\v2\x1e.user_loongarch64_gpregs_entryB\x05\x92~\x02\b\x01R\x06gpregs\x12=\n" +
+	"\x06fpregs\x18\x04 \x02(\v2\x1e.user_loongarch64_fpregs_entryB\x05\x92~\x02\b\x01R\x06fpregs"
 
 var (
 	file_core_loongarch64_proto_rawDescOnce sync.Once

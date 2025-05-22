@@ -482,9 +482,9 @@ const file_core_aarch64_proto_rawDesc = "" +
 	"\x10pac_address_keys\x18\x06 \x01(\v2\x11.pac_address_keysR\x0epacAddressKeys\x12;\n" +
 	"\x10pac_generic_keys\x18\a \x01(\v2\x11.pac_generic_keysR\x0epacGenericKeys\"\xef\x01\n" +
 	"\x13thread_info_aarch64\x12+\n" +
-	"\x0eclear_tid_addr\x18\x01 \x02(\x04B\x05\xd2?\x02\b\x01R\fclearTidAddr\x12\x10\n" +
+	"\x0eclear_tid_addr\x18\x01 \x02(\x04B\x05\x92~\x02\b\x01R\fclearTidAddr\x12\x10\n" +
 	"\x03tls\x18\x02 \x02(\x04R\x03tls\x127\n" +
-	"\x06gpregs\x18\x03 \x02(\v2\x18.user_aarch64_regs_entryB\x05\xd2?\x02\b\x01R\x06gpregs\x12:\n" +
+	"\x06gpregs\x18\x03 \x02(\v2\x18.user_aarch64_regs_entryB\x05\x92~\x02\b\x01R\x06gpregs\x12:\n" +
 	"\x06fpsimd\x18\x04 \x02(\v2\".user_aarch64_fpsimd_context_entryR\x06fpsimd\x12$\n" +
 	"\bpac_keys\x18\x05 \x01(\v2\t.pac_keysR\apacKeys"
 

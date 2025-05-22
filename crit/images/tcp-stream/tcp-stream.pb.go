@@ -290,7 +290,7 @@ const file_tcp_stream_proto_rawDesc = "" +
 	"\ainq_seq\x18\x02 \x02(\rR\x06inqSeq\x12\x19\n" +
 	"\boutq_len\x18\x03 \x02(\rR\aoutqLen\x12\x19\n" +
 	"\boutq_seq\x18\x04 \x02(\rR\aoutqSeq\x12 \n" +
-	"\bopt_mask\x18\x05 \x02(\rB\x05\xd2?\x02\b\x01R\aoptMask\x12\x1d\n" +
+	"\bopt_mask\x18\x05 \x02(\rB\x05\x92~\x02\b\x01R\aoptMask\x12\x1d\n" +
 	"\n" +
 	"snd_wscale\x18\x06 \x02(\rR\tsndWscale\x12\x1b\n" +
 	"\tmss_clamp\x18\a \x02(\rR\bmssClamp\x12\x1d\n" +

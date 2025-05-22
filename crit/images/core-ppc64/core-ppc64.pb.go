@@ -501,8 +501,8 @@ const file_core_ppc64_proto_rawDesc = "" +
 	"\avrstate\x18\x03 \x01(\v2\x19.user_ppc64_vrstate_entryR\avrstate\x126\n" +
 	"\bvsxstate\x18\x04 \x01(\v2\x1a.user_ppc64_vsxstate_entryR\bvsxstate\"\xce\x02\n" +
 	"\x11thread_info_ppc64\x12+\n" +
-	"\x0eclear_tid_addr\x18\x01 \x02(\x04B\x05\xd2?\x02\b\x01R\fclearTidAddr\x125\n" +
-	"\x06gpregs\x18\x02 \x02(\v2\x16.user_ppc64_regs_entryB\x05\xd2?\x02\b\x01R\x06gpregs\x123\n" +
+	"\x0eclear_tid_addr\x18\x01 \x02(\x04B\x05\x92~\x02\b\x01R\fclearTidAddr\x125\n" +
+	"\x06gpregs\x18\x02 \x02(\v2\x16.user_ppc64_regs_entryB\x05\x92~\x02\b\x01R\x06gpregs\x123\n" +
 	"\afpstate\x18\x03 \x01(\v2\x19.user_ppc64_fpstate_entryR\afpstate\x123\n" +
 	"\avrstate\x18\x04 \x01(\v2\x19.user_ppc64_vrstate_entryR\avrstate\x126\n" +
 	"\bvsxstate\x18\x05 \x01(\v2\x1a.user_ppc64_vsxstate_entryR\bvsxstate\x123\n" +

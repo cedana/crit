@@ -381,9 +381,9 @@ const file_core_arm_proto_rawDesc = "" +
 	"\x06fpinst\x18\x04 \x02(\rR\x06fpinst\x12\x18\n" +
 	"\afpinst2\x18\x05 \x02(\rR\afpinst2\"\xb9\x01\n" +
 	"\x0fthread_info_arm\x12+\n" +
-	"\x0eclear_tid_addr\x18\x01 \x02(\x04B\x05\xd2?\x02\b\x01R\fclearTidAddr\x12\x10\n" +
+	"\x0eclear_tid_addr\x18\x01 \x02(\x04B\x05\x92~\x02\b\x01R\fclearTidAddr\x12\x10\n" +
 	"\x03tls\x18\x02 \x02(\rR\x03tls\x123\n" +
-	"\x06gpregs\x18\x03 \x02(\v2\x14.user_arm_regs_entryB\x05\xd2?\x02\b\x01R\x06gpregs\x122\n" +
+	"\x06gpregs\x18\x03 \x02(\v2\x14.user_arm_regs_entryB\x05\x92~\x02\b\x01R\x06gpregs\x122\n" +
 	"\afpstate\x18\x04 \x02(\v2\x18.user_arm_vfpstate_entryR\afpstate"
 
 var (

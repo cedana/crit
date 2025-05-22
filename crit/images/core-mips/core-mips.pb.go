@@ -842,10 +842,10 @@ const file_core_mips_proto_rawDesc = "" +
 	"\tfpu_fcr31\x18# \x02(\rR\bfpuFcr31\x12\x15\n" +
 	"\x06fpu_id\x18$ \x02(\rR\x05fpuId\"\xbf\x01\n" +
 	"\x10thread_info_mips\x12+\n" +
-	"\x0eclear_tid_addr\x18\x01 \x02(\x04B\x05\xd2?\x02\b\x01R\fclearTidAddr\x12\x10\n" +
+	"\x0eclear_tid_addr\x18\x01 \x02(\x04B\x05\x92~\x02\b\x01R\fclearTidAddr\x12\x10\n" +
 	"\x03tls\x18\x02 \x02(\x04R\x03tls\x124\n" +
-	"\x06gpregs\x18\x03 \x02(\v2\x15.user_mips_regs_entryB\x05\xd2?\x02\b\x01R\x06gpregs\x126\n" +
-	"\x06fpregs\x18\x04 \x02(\v2\x17.user_mips_fpregs_entryB\x05\xd2?\x02\b\x01R\x06fpregs"
+	"\x06gpregs\x18\x03 \x02(\v2\x15.user_mips_regs_entryB\x05\x92~\x02\b\x01R\x06gpregs\x126\n" +
+	"\x06fpregs\x18\x04 \x02(\v2\x17.user_mips_fpregs_entryB\x05\x92~\x02\b\x01R\x06fpregs"
 
 var (
 	file_core_mips_proto_rawDescOnce sync.Once
