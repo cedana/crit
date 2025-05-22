@@ -5,15 +5,15 @@ import (
 	"encoding/binary"
 	"errors"
 	"fmt"
-	"os"
 
 	"github.com/cedana/go-criu/v7/magic"
+	"github.com/spf13/afero"
 	"google.golang.org/protobuf/proto"
 )
 
 // encodeImg identifies the type of image file
 // and calls the appropriate encode handler
-func encodeImg(img *CriuImage, f *os.File) error {
+func encodeImg(img *CriuImage, f afero.File) error {
 	magicMap := magic.LoadMagic()
 	var err error
 
@@ -73,7 +73,7 @@ func encodeImg(img *CriuImage, f *os.File) error {
 // encodeDefault is used for all image files
 // that are in the standard protobuf format
 func (img *CriuImage) encodeDefault(
-	f *os.File,
+	f afero.File,
 	encodeExtra func(string) ([]byte, error),
 ) error {
 	sizeBuf := make([]byte, 4)
@@ -111,7 +111,7 @@ func (img *CriuImage) encodeDefault(
 }
 
 // Special handler for ghost image
-func (img *CriuImage) encodeGhostFile(f *os.File) error {
+func (img *CriuImage) encodeGhostFile(f afero.File) error {
 	sizeBuf := make([]byte, 4)
 	// Write primary entry
 	payload, err := proto.Marshal(img.Entries[0].Message)

@@ -6,7 +6,6 @@ import (
 	"encoding/json"
 	"errors"
 	"io"
-	"os"
 
 	bpfmap_data "github.com/cedana/go-criu/v7/crit/images/bpfmap-data"
 	ipc_msg "github.com/cedana/go-criu/v7/crit/images/ipc-msg"
@@ -15,13 +14,14 @@ import (
 	pipe_data "github.com/cedana/go-criu/v7/crit/images/pipe-data"
 	sk_packet "github.com/cedana/go-criu/v7/crit/images/sk-packet"
 	tcp_stream "github.com/cedana/go-criu/v7/crit/images/tcp-stream"
+	"github.com/spf13/afero"
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
 )
 
 // Extra data handler for pipe and FIFO data
 func decodePipesData(
-	f *os.File,
+	f afero.File,
 	payload proto.Message,
 	noPayload bool,
 ) (string, error) {
@@ -47,7 +47,7 @@ func decodePipesData(
 
 // Extra data handler for socket queues
 func decodeSkQueues(
-	f *os.File,
+	f afero.File,
 	payload proto.Message,
 	noPayload bool,
 ) (string, error) {
@@ -78,7 +78,7 @@ type tcpStreamExtra struct {
 
 // Extra data handler for TCP streams
 func decodeTCPStream(
-	f *os.File,
+	f afero.File,
 	payload proto.Message,
 	noPayload bool,
 ) (string, error) {
@@ -115,7 +115,7 @@ func decodeTCPStream(
 
 // Extra data handler for BPF map data
 func decodeBpfmapData(
-	f *os.File,
+	f afero.File,
 	payload proto.Message,
 	noPayload bool,
 ) (string, error) {
@@ -141,7 +141,7 @@ func decodeBpfmapData(
 
 // Extra data handler for IPC semaphores
 func decodeIpcSem(
-	f *os.File,
+	f afero.File,
 	payload proto.Message,
 	noPayload bool,
 ) (string, error) {
@@ -180,7 +180,7 @@ func decodeIpcSem(
 
 // Extra data handler for IPC shared memory
 func decodeIpcShm(
-	f *os.File,
+	f afero.File,
 	payload proto.Message,
 	noPayload bool,
 ) (string, error) {
@@ -212,7 +212,7 @@ func decodeIpcShm(
 
 // Extra data handler for IPC messages
 func decodeIpcMsg(
-	f *os.File,
+	f afero.File,
 	payload proto.Message,
 	noPayload bool,
 ) (string, error) {

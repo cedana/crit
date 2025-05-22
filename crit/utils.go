@@ -14,11 +14,12 @@ import (
 	"github.com/cedana/go-criu/v7/crit/images/regfile"
 	sk_unix "github.com/cedana/go-criu/v7/crit/images/sk-unix"
 	"github.com/cedana/go-criu/v7/magic"
+	"github.com/spf13/afero"
 	"google.golang.org/protobuf/proto"
 )
 
 // Helper to decode magic name from hex value
-func ReadMagic(f *os.File) (string, error) {
+func ReadMagic(f afero.File) (string, error) {
 	magicMap := magic.LoadMagic()
 	// Read magic
 	magicBuf := make([]byte, 4)
@@ -58,7 +59,7 @@ func countBytes(n int64) string {
 }
 
 // Function to count number of top-level entries
-func countImg(f *os.File) (*CriuImage, error) {
+func countImg(f afero.File) (*CriuImage, error) {
 	img := CriuImage{}
 	var err error
 

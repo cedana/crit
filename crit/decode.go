@@ -5,16 +5,16 @@ import (
 	"encoding/binary"
 	"errors"
 	"io"
-	"os"
 
 	ghost_file "github.com/cedana/go-criu/v7/crit/images/ghost-file"
 	"github.com/cedana/go-criu/v7/crit/images/pagemap"
+	"github.com/spf13/afero"
 	"google.golang.org/protobuf/proto"
 )
 
 // decodeImg identifies the type of image file
 // and calls the appropriate decode handler
-func decodeImg(f *os.File, entryType proto.Message, noPayload bool) (*CriuImage, error) {
+func decodeImg(f afero.File, entryType proto.Message, noPayload bool) (*CriuImage, error) {
 	img := CriuImage{EntryType: entryType}
 	var err error
 
@@ -59,8 +59,8 @@ func decodeImg(f *os.File, entryType proto.Message, noPayload bool) (*CriuImage,
 // decodeDefault is used for all image files
 // that are in the standard protobuf format
 func (img *CriuImage) decodeDefault(
-	f *os.File,
-	decodeExtra func(*os.File, proto.Message, bool) (string, error),
+	f afero.File,
+	decodeExtra func(afero.File, proto.Message, bool) (string, error),
 	noPayload bool,
 ) error {
 	sizeBuf := make([]byte, 4)
@@ -96,7 +96,7 @@ func (img *CriuImage) decodeDefault(
 }
 
 // Special handler for pagemap image
-func (img *CriuImage) decodePagemap(f *os.File) error {
+func (img *CriuImage) decodePagemap(f afero.File) error {
 	sizeBuf := make([]byte, 4)
 	// First entry is pagemap head
 	var payload proto.Message = &pagemap.PagemapHead{}
@@ -126,7 +126,7 @@ func (img *CriuImage) decodePagemap(f *os.File) error {
 }
 
 // Special handler for ghost image
-func (img *CriuImage) decodeGhostFile(f *os.File, noPayload bool) error {
+func (img *CriuImage) decodeGhostFile(f afero.File, noPayload bool) error {
 	sizeBuf := make([]byte, 4)
 	if _, err := f.Read(sizeBuf); err != nil {
 		return err

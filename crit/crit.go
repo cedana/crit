@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"os"
 
+	"github.com/spf13/afero"
 	"google.golang.org/protobuf/proto"
 )
 
@@ -35,8 +35,8 @@ type Critter interface {
 // * Boolean to format and indent JSON output
 // * Boolean to skip payload data
 type crit struct {
-	inputFile  *os.File
-	outputFile *os.File
+	inputFile  afero.File
+	outputFile afero.File
 	// Directory path is required only for exploring
 	inputDirPath string
 	pretty       bool
@@ -45,7 +45,7 @@ type crit struct {
 
 // New creates an instance of the CRIT service
 func New(
-	inputFilePath, outputFilePath *os.File,
+	inputFilePath, outputFilePath afero.File,
 	inputDirPath string,
 	pretty, noPayload bool,
 ) Critter {
