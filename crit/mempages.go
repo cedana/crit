@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"regexp"
 
-	"github.com/checkpoint-restore/go-criu/v7/crit/images/mm"
-	"github.com/checkpoint-restore/go-criu/v7/crit/images/pagemap"
+	"github.com/cedana/go-criu/v7/crit/images/mm"
+	"github.com/cedana/go-criu/v7/crit/images/pagemap"
 )
 
 var sysPageSize = os.Getpagesize()

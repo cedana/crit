@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/checkpoint-restore/go-criu/v7"
-	"github.com/checkpoint-restore/go-criu/v7/crit"
-	"github.com/checkpoint-restore/go-criu/v7/crit/images/stats"
-	"github.com/checkpoint-restore/go-criu/v7/rpc"
+	"github.com/cedana/go-criu/v7"
+	"github.com/cedana/go-criu/v7/crit"
+	"github.com/cedana/go-criu/v7/crit/images/stats"
+	"github.com/cedana/go-criu/v7/rpc"
 	"google.golang.org/protobuf/proto"
 )
 

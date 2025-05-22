@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/checkpoint-restore/go-criu/v7/crit"
+	"github.com/cedana/go-criu/v7/crit"
 	"github.com/spf13/cobra"
 )
 

@@ -16,5 +16,5 @@ message CRIU_Opts {
 
 extend google.protobuf.FieldOptions {
 	// Registered unique number to use for all kinds of custom options.
-	optional CRIU_Opts criu = 2018;
+	optional CRIU_Opts criu = 1018;
 }

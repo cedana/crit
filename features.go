@@ -3,7 +3,7 @@ package criu
 import (
 	"errors"
 
-	"github.com/checkpoint-restore/go-criu/v7/rpc"
+	"github.com/cedana/go-criu/v7/rpc"
 )
 
 // Feature checking in go-criu is based on the libcriu feature checking function.

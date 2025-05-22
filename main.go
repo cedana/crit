@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"syscall"
 
-	"github.com/checkpoint-restore/go-criu/v7/rpc"
+	"github.com/cedana/go-criu/v7/rpc"
 	"google.golang.org/protobuf/proto"
 )
 

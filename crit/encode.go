@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/checkpoint-restore/go-criu/v7/magic"
+	"github.com/cedana/go-criu/v7/magic"
 	"google.golang.org/protobuf/proto"
 )
 
