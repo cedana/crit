@@ -16,4 +16,4 @@ require (
 	github.com/spf13/pflag v1.0.6 // indirect
 )
 
-replace github.com/checkpoint-restore/go-criu/v7 => ./
+replace github.com/checkpoint-restore/go-criu/v7 => .
