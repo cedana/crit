@@ -7,7 +7,7 @@ import "fown.proto";
 
 message memfd_file_entry {
 	required uint32		id		= 1;
-	required uint32		flags		= 2 [(criu2).flags = "rfile.flags"];
+	required uint32		flags		= 2 [(criu_cedana).flags = "rfile.flags"];
 	required uint64		pos		= 3;
 	required fown_entry	fown		= 4;
 	required uint32		inode_id	= 5;
@@ -19,7 +19,7 @@ message memfd_inode_entry {
 	required uint32		gid		= 3;
 	required uint64		size		= 4;
 	required uint32		shmid		= 5;
-	required uint32		seals		= 6 [(criu2).flags = "seals.flags"];
+	required uint32		seals		= 6 [(criu_cedana).flags = "seals.flags"];
 	required uint64		inode_id	= 7;
 	optional uint32		hugetlb_flag	= 8;
 	optional uint32		mode		= 9;

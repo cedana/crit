@@ -42,8 +42,8 @@ message user_x86_regs_entry {
 }
 
 message user_x86_cet_entry {
-	required uint64			cet		=  1[(criu2).hex = true];
-	required uint64			ssp		=  2[(criu2).hex = true];
+	required uint64			cet		=  1[(criu_cedana).hex = true];
+	required uint64			ssp		=  2[(criu_cedana).hex = true];
 }
 
 message user_x86_xsave_entry {
@@ -111,8 +111,8 @@ message user_desc_t {
 }
 
 message thread_info_x86 {
-	required uint64			clear_tid_addr	= 1[(criu2).hex = true];
-	required user_x86_regs_entry	gpregs		= 2[(criu2).hex = true];
+	required uint64			clear_tid_addr	= 1[(criu_cedana).hex = true];
+	required user_x86_regs_entry	gpregs		= 2[(criu_cedana).hex = true];
 	required user_x86_fpregs_entry	fpregs		= 3;
 	repeated user_desc_t		tls		= 4;
 }

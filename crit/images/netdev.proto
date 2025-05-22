@@ -29,7 +29,7 @@ message net_device_entry {
 	required nd_type type		= 1;
 	required uint32  ifindex	= 2;
 	required uint32  mtu		= 3;
-	required uint32  flags		= 4 [(criu2).hex = true];
+	required uint32  flags		= 4 [(criu_cedana).hex = true];
 	required string  name		= 5;
 
 	optional tun_link_entry tun	= 6;

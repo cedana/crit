@@ -9,16 +9,16 @@ import "fown.proto";
 message inotify_wd_entry {
 	required uint32		id		= 1;
 	required uint64		i_ino		= 2;
-	required uint32		mask		= 3 [(criu2).hex = true];
-	required uint32		ignored_mask	= 4 [(criu2).hex = true];
-	required uint32		s_dev		= 5 [(criu2).dev = true];
+	required uint32		mask		= 3 [(criu_cedana).hex = true];
+	required uint32		ignored_mask	= 4 [(criu_cedana).hex = true];
+	required uint32		s_dev		= 5 [(criu_cedana).dev = true];
 	required uint32		wd		= 6;
 	required fh_entry	f_handle	= 7;
 }
 
 message inotify_file_entry {
 	required uint32		id		= 1;
-	required uint32		flags		= 2 [(criu2).hex = true];
+	required uint32		flags		= 2 [(criu_cedana).hex = true];
 	required fown_entry	fown		= 4;
 	repeated inotify_wd_entry wd		= 5;
 }
@@ -42,10 +42,10 @@ message fanotify_mark_entry {
 	required uint32		id		= 1;
 	required mark_type	type		= 2;
 
-	required uint32		mflags		= 3 [(criu2).hex = true];
-	required uint32		mask		= 4 [(criu2).hex = true];
-	required uint32		ignored_mask	= 5 [(criu2).hex = true];
-	required uint32		s_dev		= 6 [(criu2).dev = true];
+	required uint32		mflags		= 3 [(criu_cedana).hex = true];
+	required uint32		mask		= 4 [(criu_cedana).hex = true];
+	required uint32		ignored_mask	= 5 [(criu_cedana).hex = true];
+	required uint32		s_dev		= 6 [(criu_cedana).dev = true];
 
 	optional fanotify_inode_mark_entry ie	= 7;
 	optional fanotify_mount_mark_entry me	= 8;
@@ -53,10 +53,10 @@ message fanotify_mark_entry {
 
 message fanotify_file_entry {
 	required uint32		id		= 1;
-	required uint32		flags		= 2 [(criu2).hex = true];
+	required uint32		flags		= 2 [(criu_cedana).hex = true];
 	required fown_entry	fown		= 3;
 
-	required uint32		faflags		= 4 [(criu2).hex = true];
-	required uint32		evflags		= 5 [(criu2).hex = true];
+	required uint32		faflags		= 4 [(criu_cedana).hex = true];
+	required uint32		evflags		= 5 [(criu_cedana).hex = true];
 	repeated fanotify_mark_entry mark	= 6;
 }

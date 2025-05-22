@@ -30,12 +30,12 @@ enum seccomp_mode {
 };
 
 message task_core_entry {
-	required uint32			task_state	= 1 [(criu2).dict = "gen"];
+	required uint32			task_state	= 1 [(criu_cedana).dict = "gen"];
 	required uint32			exit_code	= 2;
 
 	required uint32			personality	= 3;
 	required uint32			flags		= 4;
-	required uint64			blk_sigset	= 5[(criu2).hex = true];
+	required uint64			blk_sigset	= 5[(criu_cedana).hex = true];
 
 	required string			comm		= 6;
 
@@ -62,11 +62,11 @@ message task_core_entry {
 	optional bool			child_subreaper	= 18;
 	// Reserved for container relative start time
 	//optional uint64		start_time	= 19;
-	optional uint64			blk_sigset_extended = 20[(criu2).hex = true];
+	optional uint64			blk_sigset_extended = 20[(criu_cedana).hex = true];
 
 	optional uint32			stop_signo = 21;
 
-	optional uint32			membarrier_registration_mask	= 22 [(criu2).hex = true];
+	optional uint32			membarrier_registration_mask	= 22 [(criu_cedana).hex = true];
 }
 
 message task_kobj_ids_entry {

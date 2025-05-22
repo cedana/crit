@@ -35,17 +35,17 @@ message inet_sk_entry {
 	 */
 	required uint32			id		=  1;
 	required uint32			ino		=  2;
-	required uint32			family		=  3 [(criu2).dict = "sk"];
-	required uint32			type		=  4 [(criu2).dict = "sk"];
-	required uint32			proto		=  5 [(criu2).dict = "sk"];
-	required uint32			state		=  6 [(criu2).dict = "sk"];
+	required uint32			family		=  3 [(criu_cedana).dict = "sk"];
+	required uint32			type		=  4 [(criu_cedana).dict = "sk"];
+	required uint32			proto		=  5 [(criu_cedana).dict = "sk"];
+	required uint32			state		=  6 [(criu_cedana).dict = "sk"];
 	required uint32			src_port	=  7;
 	required uint32			dst_port	=  8;
-	required uint32			flags		=  9 [(criu2).hex = true];
+	required uint32			flags		=  9 [(criu_cedana).hex = true];
 	required uint32			backlog		= 10;
 
-	repeated uint32			src_addr	= 11 [(criu2).ipadd = true];
-	repeated uint32			dst_addr	= 12 [(criu2).ipadd = true];
+	repeated uint32			src_addr	= 11 [(criu_cedana).ipadd = true];
+	repeated uint32			dst_addr	= 12 [(criu_cedana).ipadd = true];
 
 	required fown_entry		fown		= 13;
 	required sk_opts_entry		opts		= 14;

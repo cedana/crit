@@ -121,8 +121,8 @@ var file_opts_proto_extTypes = []protoimpl.ExtensionInfo{
 		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
 		ExtensionType: (*CRIU_Opts)(nil),
 		Field:         2018,
-		Name:          "criu2",
-		Tag:           "bytes,2018,opt,name=criu2",
+		Name:          "criu_cedana",
+		Tag:           "bytes,2018,opt,name=criu_cedana",
 		Filename:      "opts.proto",
 	},
 }
@@ -131,8 +131,8 @@ var file_opts_proto_extTypes = []protoimpl.ExtensionInfo{
 var (
 	// Registered unique number to use for all kinds of custom options.
 	//
-	// optional CRIU_Opts criu2 = 2018;
-	E_Criu2 = &file_opts_proto_extTypes[0]
+	// optional CRIU_Opts criu_cedana = 2018;
+	E_CriuCedana = &file_opts_proto_extTypes[0]
 )
 
 var File_opts_proto protoreflect.FileDescriptor
@@ -148,9 +148,10 @@ const file_opts_proto_rawDesc = "" +
 	"\x03dev\x18\x04 \x01(\bR\x03dev\x12\x12\n" +
 	"\x04odev\x18\x05 \x01(\bR\x04odev\x12\x12\n" +
 	"\x04dict\x18\x06 \x01(\tR\x04dict\x12\x12\n" +
-	"\x04conv\x18\a \x01(\tR\x04conv:@\n" +
-	"\x05criu2\x12\x1d.google.protobuf.FieldOptions\x18\xe2\x0f \x01(\v2\n" +
-	".CRIU_OptsR\x05criu2"
+	"\x04conv\x18\a \x01(\tR\x04conv:K\n" +
+	"\vcriu_cedana\x12\x1d.google.protobuf.FieldOptions\x18\xe2\x0f \x01(\v2\n" +
+	".CRIU_OptsR\n" +
+	"criuCedana"
 
 var (
 	file_opts_proto_rawDescOnce sync.Once
@@ -170,8 +171,8 @@ var file_opts_proto_goTypes = []any{
 	(*descriptorpb.FieldOptions)(nil), // 1: google.protobuf.FieldOptions
 }
 var file_opts_proto_depIdxs = []int32{
-	1, // 0: criu2:extendee -> google.protobuf.FieldOptions
-	0, // 1: criu2:type_name -> CRIU_Opts
+	1, // 0: criu_cedana:extendee -> google.protobuf.FieldOptions
+	0, // 1: criu_cedana:type_name -> CRIU_Opts
 	2, // [2:2] is the sub-list for method output_type
 	2, // [2:2] is the sub-list for method input_type
 	1, // [1:2] is the sub-list for extension type_name

@@ -16,8 +16,8 @@ message user_loongarch64_fpregs_entry {
 }
 
 message thread_info_loongarch64 {
-	required uint64	clear_tid_addr	= 1[(criu2).hex = true];
+	required uint64	clear_tid_addr	= 1[(criu_cedana).hex = true];
 	required uint64	tls				= 2;
-	required user_loongarch64_gpregs_entry	gpregs	= 3[(criu2).hex = true];
-	required user_loongarch64_fpregs_entry	fpregs	= 4[(criu2).hex = true];
+	required user_loongarch64_gpregs_entry	gpregs	= 3[(criu_cedana).hex = true];
+	required user_loongarch64_fpregs_entry	fpregs	= 4[(criu_cedana).hex = true];
 }

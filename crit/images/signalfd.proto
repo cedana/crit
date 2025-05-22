@@ -7,7 +7,7 @@ import "fown.proto";
 
 message signalfd_entry {
 	required uint32		id		= 1;
-	required uint32		flags		= 2 [(criu2).hex = true];
+	required uint32		flags		= 2 [(criu_cedana).hex = true];
 	required fown_entry	fown		= 3;
-	required uint64		sigmask		= 4 [(criu2).hex = true];
+	required uint64		sigmask		= 4 [(criu_cedana).hex = true];
 };
